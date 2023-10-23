@@ -1,6 +1,5 @@
 from django.db import models
 
-# Create your models here.
 class Persona(models.Model):
     per_cod = models.AutoField(primary_key=True)  # serial en PostgreSQL se traduce a AutoField en Django
     per_apellido = models.CharField(max_length=50)
@@ -45,7 +44,7 @@ class PersonaXCargo(models.Model):
     perxcargo_sucursal_cod = models.ForeignKey('Sucursal', on_delete=models.CASCADE)
     perxcargo_vigente = models.BooleanField(default=True)
     create_at = models.DateTimeField(auto_now_add=True)
-    update_at = models.DateTimeField(auto_now=True)\
+    update_at = models.DateTimeField(auto_now=True)
 
 class Usuario(models.Model):
     usuario_id = models.AutoField(primary_key=True)
@@ -116,7 +115,6 @@ class OrdenTrabajo(models.Model):
     create_at = models.DateTimeField(auto_now_add=True)  # auto_now_add establece el valor al momento de la creación
     update_at = models.DateTimeField(auto_now=True)  # auto_now actualiza el valor cada vez que se guarda el objeto
 
-
 class Inventario(models.Model):
     inv_cod = models.AutoField(primary_key=True)  # serial en PostgreSQL se traduce a AutoField en Django
     inv_nombre = models.CharField(max_length=30)
@@ -146,7 +144,6 @@ class CotizacionReparacion(models.Model):
     cotrep_vigente = models.BooleanField(default=True)
     create_at = models.DateTimeField(auto_now_add=True)  # auto_now_add establece el valor al momento de la creación
     update_at = models.DateTimeField(auto_now=True)  # auto_now actualiza el valor cada vez que se guarda el objeto
-
 
 class RepuestoVenta(models.Model):
     repvnt_cod = models.AutoField(primary_key=True)  # SERIAL en PostgreSQL se traduce a AutoField en Django
