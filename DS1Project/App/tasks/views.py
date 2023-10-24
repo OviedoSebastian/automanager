@@ -234,3 +234,109 @@ def create_Factura(request):
     return redirect('/rutapordefinir/') #añadr la ruta donde se vaya a redirigir
 
 #FIN SECCION DE INSERCIONES
+
+#SECCION DE BORRADOS EN LAS TABLAS DE LA BD
+
+def delete_Persona(request, persona_id):
+    persona = Persona.objects.get( per_cod = persona_id)
+    persona.delete()
+
+    return redirect('/rutapordefinir/') #añadr la ruta donde se vaya a redirigir
+
+def delete_Cargo(request, cargo_id):
+    cargo = Cargo.objects.get( cargo_cod = cargo_id)
+    cargo.delete()
+
+    return redirect('/rutapordefinir/') #añadr la ruta donde se vaya a redirigir
+
+def delete_Rol(request, rol_id):
+    rol = Rol.objects.get( rol_cod = rol_id)
+    rol.delete()
+
+    return redirect('/rutapordefinir/') #añadr la ruta donde se vaya a redirigir
+
+def delete_Sucursal(request, sucursal_id):
+    sucursal = Sucursal.objects.get( sucursal_cod = sucursal_id)
+    sucursal.delete()
+
+    return redirect('/rutapordefinir/') #añadr la ruta donde se vaya a redirigir
+
+def delete_PersonaxCargo(request, personaxcarg_id):
+    personaxcargo = PersonaXCargo.objects.get( perxcargo_cod = personaxcarg_id)
+    personaxcargo.delete()
+
+    return redirect('/rutapordefinir/') #añadr la ruta donde se vaya a redirigir
+
+def delete_Usuario(request, usuarioid):
+    usuario = Usuario.objects.get( usuario_id = usuarioid)
+    usuario.delete()
+
+    return redirect('/rutapordefinir/') #añadr la ruta donde se vaya a redirigir
+
+def delete_Menu(request, menuid):
+    menu = Menu.objects.get( menu_id = menuid)
+    menu.delete()
+
+    return redirect('/rutapordefinir/') #añadr la ruta donde se vaya a redirigir
+
+def delete_Permiso(request, permisoid):
+    permiso = Permiso.objects.get( permiso_id = permisoid)
+    permiso.delete()
+
+    return redirect('/rutapordefinir/') #añadr la ruta donde se vaya a redirigir
+
+def delete_VehiculoVenta(request, vehiculoventa_id):
+    vehiculoventa = VehiculoVenta.objects.get( vehvnt_cod = vehiculoventa_id)
+    vehiculoventa.delete()
+
+    return redirect('/rutapordefinir/') #añadr la ruta donde se vaya a redirigir
+
+def delete_VehiculoReparacion(request, vehiculoreparacion_id):
+    vehiculoreparacion = VehiculoReparacion.objects.get( vehrep_cod = vehiculoreparacion_id)
+    vehiculoreparacion.delete()
+
+    return redirect('/rutapordefinir/') #añadr la ruta donde se vaya a redirigir
+
+def delete_OrdenTrabajo(request, orden_id):
+    ordentrabajo = OrdenTrabajo.objects.get( orden_cod = orden_id)
+    ordentrabajo.delete()
+
+    return redirect('/rutapordefinir/') #añadr la ruta donde se vaya a redirigir
+
+def delete_Inventario(request, inventario_id):
+    inventario = Inventario.objects.get( inv_cod = inventario_id)
+    inventario.delete()
+
+    return redirect('/rutapordefinir/') #añadr la ruta donde se vaya a redirigir
+
+def delete_InventarioPorSucursal(request, inventarioSurcursal_id):
+    inventarioporsucursal = InventarioPorSucursal.objects.get( invsus_cod = inventarioSurcursal_id)
+    inventarioporsucursal.delete()
+
+    return redirect('/rutapordefinir/') #añadr la ruta donde se vaya a redirigir
+
+def delete_CotizacionReparacion(request, cotizacionRep_id):
+    cotizacionreparacion = CotizacionReparacion.objects.get( cotrep_cod = cotizacionRep_id)
+    cotizacionreparacion.delete()
+
+    return redirect('/rutapordefinir/') #añadr la ruta donde se vaya a redirigir
+
+def delete_RepuestoVenta(request, repuestoventa_id):
+    repuestoventa = RepuestoVenta.objects.get( repvnt_cod = repuestoventa_id)
+    repuestoventa.delete()
+
+    return redirect('/rutapordefinir/') #añadr la ruta donde se vaya a redirigir
+
+def delete_CotizacionVehiculo(request, cotizacionvehiculo_id):
+    cotizacionvehiculo = CotizacionVehiculo.objects.get( cotven_cod = cotizacionvehiculo_id)
+    cotizacionvehiculo.delete()
+
+    return redirect('/rutapordefinir/') #añadr la ruta donde se vaya a redirigir
+
+def delete_Factura(request, fac_id):
+    factura = Factura.objects.get( codfac = fac_id)
+    factura.delete()
+
+    return redirect('/rutapordefinir/') #añadr la ruta donde se vaya a redirigir
+
+#FIN SECCION BORRADOS
